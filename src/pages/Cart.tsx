@@ -7,8 +7,7 @@ import * as Sentry from "@sentry/react";
 
 const CartPage = () => {
   const [pizzak, setPizzak] = useState<Array<Pizza>>([]);
-  let total = 0;
-
+  const [total, setTotal] = useState<number>(0);
   useEffect(() => {
     apiClient
       .get("/pizzak")
@@ -40,7 +39,7 @@ const CartPage = () => {
           {kosar.map((id, index) => {
             const pizza = pizzak.find((p) => p.id == id);
 
-            total += Number(pizza?.ar);
+            setTotal(prev => prev += Number(pizza?.ar));
             return (
               <tr>
                 <td>{pizza?.nev}</td>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import type { Pizza } from "../types/Pizza";
 import apiClient, { baseURL } from "../api/apiClient";
 import { toast } from "react-toastify";
-import { Button, Card, Container, Image } from "react-bootstrap";
+import { Button, Card, Image } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
 
 const OnePizzaPage = () => {

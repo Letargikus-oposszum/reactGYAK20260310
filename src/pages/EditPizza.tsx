@@ -24,7 +24,7 @@ const EditPizzaPage = () => {
   }, []);
 
   const submit = () => {
-    var dto = {
+    const dto = {
       nev: pizza.nev,
       leiras: pizza.leiras,
       ar: pizza.ar,
